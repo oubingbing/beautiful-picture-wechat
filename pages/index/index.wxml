@@ -1,5 +1,4 @@
 
-
 <view wx:if="{{show_auth}}" class='auth-container'>
   <view class='auth-wall'>
     <view class='auth-tips'>
@@ -11,6 +10,129 @@
             class='auth-button'>
       <view>授权登录</view>
     </button>
+  </view>
+</view>
+
+
+<view class='container'>
+  <view class='content'>
+
+    <view class='content-item'>
+      <view class='item-left'>
+        <view class='point'></view>
+      </view>
+      <view class='item-right'>
+        <view class='right-content'>
+          <view class='created_at'>2018.08.01</view>
+          <view class='pic-container'>
+            <image class='pic' src='/image/i2.jpg' mode='widthFix'></image>
+          </view>
+          
+          <view class='footer'>
+            <view class='footer-item'>
+              <image class='icon' src='/image/view.png'></image>
+              <view>100</view>
+            </view>
+            <view class='footer-item'>
+              <image class='icon' src='/image/down-load.png'></image>
+              <view>下载</view>
+            </view>
+            <view class='footer-item'>
+              <image class='icon' src='/image/share.png'></image>
+              <view>分享</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='content-item'>
+      <view class='item-left'>
+        <view class='point'></view>
+      </view>
+      <view class='item-right'>
+        <view class='right-content'>
+          <view class='created_at'>2018.08.01</view>
+          <view class='pic-container'>
+            <image class='pic' src='/image/i4.jpg' mode='widthFix'></image>
+          </view>
+          
+          <view class='footer'>
+            <view class='footer-item'>
+              <image class='icon' src='/image/view.png'></image>
+              <view>100</view>
+            </view>
+            <view class='footer-item'>
+              <image class='icon' src='/image/down-load.png'></image>
+              <view>下载</view>
+            </view>
+            <view class='footer-item'>
+              <image class='icon' src='/image/share.png'></image>
+              <view>分享</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='content-item'>
+      <view class='item-left'>
+        <view class='point'></view>
+      </view>
+      <view class='item-right'>
+        <view class='right-content'>
+          <view class='created_at'>2018.08.01</view>
+          <view class='pic-container'>
+            <image class='pic' src='/image/i1.jpg' mode='widthFix'></image>
+          </view>
+          
+          <view class='footer'>
+            <view class='footer-item'>
+              <image class='icon' src='/image/view.png'></image>
+              <view>100</view>
+            </view>
+            <view class='footer-item'>
+              <image class='icon' src='/image/down-load.png'></image>
+              <view>下载</view>
+            </view>
+            <view class='footer-item'>
+              <image class='icon' src='/image/share.png'></image>
+              <view>分享</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='content-item'>
+      <view class='item-left'>
+        <view class='point'></view>
+      </view>
+      <view class='item-right'>
+        <view class='right-content'>
+          <view class='created_at'>2018.08.01</view>
+          <view class='pic-container'>
+            <image class='pic' src='/image/i3.jpg' mode='widthFix'></image>
+          </view>
+          
+          <view class='footer'>
+            <view class='footer-item'>
+              <image class='icon' src='/image/view.png'></image>
+              <view>100</view>
+            </view>
+            <view class='footer-item'>
+              <image class='icon' src='/image/down-load.png'></image>
+              <view>下载</view>
+            </view>
+            <view class='footer-item'>
+              <image class='icon' src='/image/share.png'></image>
+              <view>分享</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
   </view>
 </view>
 

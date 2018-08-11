@@ -5,9 +5,9 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#66CDAA",
+    "navigationBarBackgroundColor": "white",
     "navigationBarTitleText": "唯美图吧",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#515151",
@@ -17,9 +17,9 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "image/saylove.png",
-        "selectedIconPath": "image/select-saylove.png",
-        "text": "表白墙"
+        "iconPath": "image/pic.png",
+        "selectedIconPath": "image/select-pic.png",
+        "text": "专辑"
       },
       {
         "pagePath": "pages/personal/personal",

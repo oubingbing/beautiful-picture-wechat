@@ -1,5 +1,5 @@
 page{
-  background-color: #F5F5F5;
+  background-color:white;
   display: flex;
   flex-direction: column;
 }
@@ -10,7 +10,114 @@ page{
   flex-direction: column;
 }
 
+.content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
+.content .content-item{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.content-item .item-left{
+  width: 5%;
+  display: flex;
+  flex-direction: row;
+  border-right-style:solid;
+  border-width:1rpx;
+  border-color:gainsboro;
+  padding-top: 20rpx;
+}
+
+.item-left .point{
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 15rpx;
+  background: darkorchid;
+  position: absolute;
+  z-index: 90;
+  left: 25rpx;
+  top: 24rpx;
+}
+
+.content-item .item-right{
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.item-right .created_at{
+  font-size: 30rpx;
+  color: darkgray;
+}
+
+.item-right .right-content{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-item .pic-container{
+  width: 100%;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.pic-container .pic{
+  border-radius: 15rpx;
+  width: 100%;
+  box-shadow: 0rpx 0rpx 20rpx 8rpx gainsboro;
+}
+
+.content-item .footer{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+
+.footer .footer-item{
+  display: flex;
+  flex-direction: row;
+  font-size: 25rpx;
+  color: gray;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.content-item .description{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 100;
+  bottom: 0rpx;
+  background: black;
+  color: white;
+  background:rgba(2,2,2,0.4);
+  padding: 10rpx;
+}
+
+.description .description-word{
+  padding-bottom: 5rpx;
+  font-size: 35rpx;
+}
 
 /** 授权按钮 **/
 .auth-container{
