@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/personal/personal"
+    "pages/personal/personal",
+    "pages/album_detail/album_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -72,5 +72,13 @@ Page({
       current: url,
       urls: images
     })
-  }
+  },
+  /**
+   * 进入专辑详情页面
+   */
+  openDetail: function () {
+    wx.navigateTo({
+      url: '/pages/album_detail/album_detail?type=0&new_message=1'
+    })
+  },
 })

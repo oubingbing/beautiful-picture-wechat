@@ -29,12 +29,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "搜索学校",
-					"pathName": "pages/school/school",
+					"id": 0,
+					"name": "专辑详情",
+					"pathName": "pages/album_detail/album_detail",
 					"query": ""
 				},
 				{

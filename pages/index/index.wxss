@@ -41,7 +41,7 @@ page{
   position: absolute;
   z-index: 90;
   left: 25rpx;
-  top: 24rpx;
+  top: 47rpx;
 }
 
 .content-item .item-right{
@@ -58,6 +58,37 @@ page{
   color: darkgray;
 }
 
+.time{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 250rpx;
+  height: 30prx;
+  color: darkgray;
+  background: white;
+  transform:rotate(90deg);
+  margin-top: 250rpx;
+  margin-left: -90rpx;
+  font-size: 30rpx;
+  letter-spacing:10rpx;
+  padding-left: 10rpx;
+}
+
+.item-right .header{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 30rpx;
+  color: gray;
+}
+
+.header .logo{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 45rpx;
+}
+
 .item-right .right-content{
   width: 90%;
   display: flex;
@@ -66,8 +97,7 @@ page{
 
 .content-item .pic-container{
   width: 100%;
-  padding-top: 20rpx;
-  padding-bottom: 20rpx;
+  padding-bottom: 15rpx;
   display: flex;
   flex-direction: column;
 }

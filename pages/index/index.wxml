@@ -20,12 +20,16 @@
     <view class='content-item'>
       <view class='item-left'>
         <view class='point'></view>
+        <view class='left-time'><view class='time'>2018.10.01</view></view>
       </view>
       <view class='item-right'>
         <view class='right-content'>
-          <view class='created_at'>2018.08.01</view>
+          <view class='header'>
+            <image src='/image/main-logo.jpg' class='logo'></image>
+            <view>第一期，美人计</view>
+          </view>
           <view class='pic-container'>
-            <image class='pic' src='/image/i2.jpg' mode='widthFix'></image>
+            <image class='pic' src='/image/i2.jpg' mode='widthFix' bindtap='openDetail'></image>
           </view>
           
           <view class='footer'>
@@ -49,12 +53,16 @@
     <view class='content-item'>
       <view class='item-left'>
         <view class='point'></view>
+        <view class='left-time'><view class='time'>2018.10.01</view></view>
       </view>
       <view class='item-right'>
         <view class='right-content'>
-          <view class='created_at'>2018.08.01</view>
+          <view class='header'>
+            <image src='/image/main-logo.jpg' class='logo'></image>
+            <view>第一期，美人计</view>
+          </view>
           <view class='pic-container'>
-            <image class='pic' src='/image/i4.jpg' mode='widthFix'></image>
+            <image class='pic' src='/image/i4.jpg' mode='widthFix' bindtap='openDetail'></image>
           </view>
           
           <view class='footer'>
@@ -78,12 +86,16 @@
     <view class='content-item'>
       <view class='item-left'>
         <view class='point'></view>
+        <view class='left-time'><view class='time'>2018.10.01</view></view>
       </view>
       <view class='item-right'>
         <view class='right-content'>
-          <view class='created_at'>2018.08.01</view>
+          <view class='header'>
+            <image src='/image/main-logo.jpg' class='logo'></image>
+            <view>第一期，美人计</view>
+          </view>
           <view class='pic-container'>
-            <image class='pic' src='/image/i1.jpg' mode='widthFix'></image>
+            <image class='pic' src='/image/i1.jpg' mode='widthFix' bindtap='openDetail'></image>
           </view>
           
           <view class='footer'>
@@ -107,12 +119,16 @@
     <view class='content-item'>
       <view class='item-left'>
         <view class='point'></view>
+        <view class='left-time'><view class='time'>2018.10.01</view></view>
       </view>
       <view class='item-right'>
         <view class='right-content'>
-          <view class='created_at'>2018.08.01</view>
+          <view class='header'>
+            <image src='/image/main-logo.jpg' class='logo'></image>
+            <view>第一期，美人计</view>
+          </view>
           <view class='pic-container'>
-            <image class='pic' src='/image/i3.jpg' mode='widthFix'></image>
+            <image class='pic' src='/image/i3.jpg' mode='widthFix' bindtap='openDetail'></image>
           </view>
           
           <view class='footer'>
