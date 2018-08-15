@@ -34,14 +34,14 @@ page{
 }
 
 .item-left .point{
-  width: 30rpx;
-  height: 30rpx;
-  border-radius: 15rpx;
+  width: 25rpx;
+  height: 25rpx;
+  border-radius: 13rpx;
   background: darkorchid;
   position: absolute;
   z-index: 90;
-  left: 25rpx;
-  top: 47rpx;
+  left: 27rpx;
+  top: 50rpx;
 }
 
 .content-item .item-right{

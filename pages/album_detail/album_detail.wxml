@@ -1,77 +1,123 @@
 <view class='container'>
   <view class='content'>
+    <view class='content-left'>
 
-    <view class='item'>
-      <image class='main-pic' mode='widthFix' src='/image/i2.jpg'></image>
-      <view class='footer'>
-        <view class='footer-item'>
-          <image class='icon' src='/image/collect-icon.png.png'></image>
-          <view>收藏</view>
+      <view class='item'>
+        <image class='main-pic' mode='widthFix' src='/image/i2.jpg'></image>
+        <view class='footer'>
+          <view class='footer-item'>
+            <image class='icon' src='/image/collect-icon.png'></image>
+            <view>收藏</view>
+          </view>
+          <view class='footer-item'>
+            <image class='icon' src='/image/down-load.png'></image>
+              <view>下载</view>
+            </view>
         </view>
-        <view class='footer-item'>
-          <image class='icon' src='/image/down-load.png'></image>
-            <view>下载</view>
-          </view>
-        <view class='footer-item'>
-            <image class='icon' src='/image/share.png'></image>
-            <view>分享</view>
-          </view>
       </view>
+
+      <view class='item'>
+        <image class='main-pic' mode='widthFix' src='/image/i3.jpg'></image>
+        <view class='footer'>
+          <view class='footer-item'>
+            <image class='icon' src='/image/collect-icon.png'></image>
+            <view>收藏</view>
+          </view>
+          <view class='footer-item'>
+            <image class='icon' src='/image/down-load.png'></image>
+              <view>下载</view>
+            </view>
+        </view>
+      </view>
+
+      <view class='item'>
+        <image class='main-pic' mode='widthFix' src='/image/i5.jpg'></image>
+        <view class='footer'>
+          <view class='footer-item'>
+            <image class='icon' src='/image/collect-icon.png'></image>
+            <view>收藏</view>
+          </view>
+          <view class='footer-item'>
+            <image class='icon' src='/image/down-load.png'></image>
+              <view>下载</view>
+            </view>
+        </view>
+      </view>
+
+      <view class='item'>
+        <image class='main-pic' mode='widthFix' src='/image/t1.jpg'></image>
+        <view class='footer'>
+          <view class='footer-item'>
+            <image class='icon' src='/image/collect-icon.png'></image>
+            <view>收藏</view>
+          </view>
+          <view class='footer-item'>
+            <image class='icon' src='/image/down-load.png'></image>
+              <view>下载</view>
+            </view>
+        </view>
+      </view>
+
     </view>
 
-    <view class='item'>
-      <image class='main-pic' mode='widthFix' src='/image/i1.jpg'></image>
-      <view class='footer'>
-        <view class='footer-item'>
-          <image class='icon' src='/image/collect-icon.png'></image>
-          <view>收藏</view>
-        </view>
-        <view class='footer-item'>
-          <image class='icon' src='/image/down-load.png'></image>
-            <view>下载</view>
-          </view>
-        <view class='footer-item'>
-            <image class='icon' src='/image/share.png'></image>
-            <view>分享</view>
-          </view>
-      </view>
-    </view>
+    <view class='content-right'>
 
-    <view class='item'>
-      <image class='main-pic' mode='widthFix' src='/image/i3.jpg'></image>
-      <view class='footer'>
-        <view class='footer-item'>
-          <image class='icon' src='/image/collect-icon.png.png'></image>
-          <view>收藏</view>
+      <view class='item'>
+        <image class='main-pic' mode='widthFix' src='/image/i1.jpg'></image>
+        <view class='footer'>
+          <view class='footer-item'>
+            <image class='icon' src='/image/collect-icon.png'></image>
+            <view>收藏</view>
+          </view>
+          <view class='footer-item'>
+            <image class='icon' src='/image/down-load.png'></image>
+              <view>下载</view>
+            </view>
         </view>
-        <view class='footer-item'>
-          <image class='icon' src='/image/down-load.png'></image>
-            <view>下载</view>
-          </view>
-        <view class='footer-item'>
-            <image class='icon' src='/image/share.png'></image>
-            <view>分享</view>
-          </view>
       </view>
-    </view>
 
-        <view class='item'>
-      <image class='main-pic' mode='widthFix' src='/image/i4.jpg'></image>
-      <view class='footer'>
-        <view class='footer-item'>
-          <image class='icon' src='/image/collect-icon.png.png'></image>
-          <view>收藏</view>
+      <view class='item'>
+        <image class='main-pic' mode='widthFix' src='/image/i7.jpg'></image>
+        <view class='footer'>
+          <view class='footer-item'>
+            <image class='icon' src='/image/collect-icon.png'></image>
+            <view>收藏</view>
+          </view>
+          <view class='footer-item'>
+            <image class='icon' src='/image/down-load.png'></image>
+              <view>下载</view>
+            </view>
         </view>
-        <view class='footer-item'>
-          <image class='icon' src='/image/down-load.png'></image>
-            <view>下载</view>
-          </view>
-        <view class='footer-item'>
-            <image class='icon' src='/image/share.png'></image>
-            <view>分享</view>
-          </view>
       </view>
-    </view>
 
+      <view class='item'>
+        <image class='main-pic' mode='widthFix' src='/image/i4.jpg'></image>
+        <view class='footer'>
+          <view class='footer-item'>
+            <image class='icon' src='/image/collect-icon.png'></image>
+            <view>收藏</view>
+          </view>
+          <view class='footer-item'>
+            <image class='icon' src='/image/down-load.png'></image>
+              <view>下载</view>
+            </view>
+        </view>
+      </view>
+
+      <view class='item'>
+        <image class='main-pic' mode='widthFix' src='/image/i8.jpg'></image>
+        <view class='footer'>
+          <view class='footer-item'>
+            <image class='icon' src='/image/collect-icon.png'></image>
+            <view>收藏</view>
+          </view>
+          <view class='footer-item'>
+            <image class='icon' src='/image/down-load.png'></image>
+              <view>下载</view>
+            </view>
+        </view>
+      </view>
+
+    </view>
   </view>
 </view>
