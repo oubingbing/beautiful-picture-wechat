@@ -69,8 +69,8 @@ page{
   transform:rotate(90deg);
   margin-top: 250rpx;
   margin-left: -90rpx;
-  font-size: 30rpx;
-  letter-spacing:10rpx;
+  font-size: 20rpx;
+  letter-spacing:15rpx;
   padding-left: 10rpx;
 }
 
