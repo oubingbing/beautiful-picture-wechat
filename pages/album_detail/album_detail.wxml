@@ -7,11 +7,9 @@
         <view class='footer'>
           <view class='footer-item'>
             <image class='icon' src='/image/collect-icon.png'></image>
-            <view>收藏</view>
           </view>
           <view class='footer-item'>
             <image class='icon' src='/image/down-load.png'></image>
-              <view>下载</view>
             </view>
         </view>
       </view>
@@ -21,11 +19,9 @@
         <view class='footer'>
           <view class='footer-item'>
             <image class='icon' src='/image/collect-icon.png'></image>
-            <view>收藏</view>
           </view>
           <view class='footer-item'>
             <image class='icon' src='/image/down-load.png'></image>
-              <view>下载</view>
             </view>
         </view>
       </view>
@@ -35,11 +31,9 @@
         <view class='footer'>
           <view class='footer-item'>
             <image class='icon' src='/image/collect-icon.png'></image>
-            <view>收藏</view>
           </view>
           <view class='footer-item'>
             <image class='icon' src='/image/down-load.png'></image>
-              <view>下载</view>
             </view>
         </view>
       </view>
@@ -49,11 +43,9 @@
         <view class='footer'>
           <view class='footer-item'>
             <image class='icon' src='/image/collect-icon.png'></image>
-            <view>收藏</view>
           </view>
           <view class='footer-item'>
             <image class='icon' src='/image/down-load.png'></image>
-              <view>下载</view>
             </view>
         </view>
       </view>
@@ -67,11 +59,9 @@
         <view class='footer'>
           <view class='footer-item'>
             <image class='icon' src='/image/collect-icon.png'></image>
-            <view>收藏</view>
           </view>
           <view class='footer-item'>
             <image class='icon' src='/image/down-load.png'></image>
-              <view>下载</view>
             </view>
         </view>
       </view>
@@ -81,11 +71,9 @@
         <view class='footer'>
           <view class='footer-item'>
             <image class='icon' src='/image/collect-icon.png'></image>
-            <view>收藏</view>
           </view>
           <view class='footer-item'>
             <image class='icon' src='/image/down-load.png'></image>
-              <view>下载</view>
             </view>
         </view>
       </view>
@@ -95,11 +83,9 @@
         <view class='footer'>
           <view class='footer-item'>
             <image class='icon' src='/image/collect-icon.png'></image>
-            <view>收藏</view>
           </view>
           <view class='footer-item'>
             <image class='icon' src='/image/down-load.png'></image>
-              <view>下载</view>
             </view>
         </view>
       </view>
@@ -109,11 +95,9 @@
         <view class='footer'>
           <view class='footer-item'>
             <image class='icon' src='/image/collect-icon.png'></image>
-            <view>收藏</view>
           </view>
           <view class='footer-item'>
             <image class='icon' src='/image/down-load.png'></image>
-              <view>下载</view>
             </view>
         </view>
       </view>

@@ -41,7 +41,7 @@ page{
   position: absolute;
   z-index: 90;
   left: 27rpx;
-  top: 50rpx;
+  top: 40rpx;
 }
 
 .content-item .item-right{
@@ -49,8 +49,8 @@ page{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20rpx;
-  padding-bottom: 20rpx;
+  padding-top: 10rpx;
+ 
 }
 
 .item-right .created_at{

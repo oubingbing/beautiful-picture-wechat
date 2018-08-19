@@ -26,7 +26,7 @@
         <view class='right-content'>
           <view class='header'>
             <image src='/image/main-logo.jpg' class='logo'></image>
-            <view>第一期，美人计</view>
+            <view>第三期 浮世绘</view>
           </view>
           <view class='pic-container'>
             <image class='pic' src='/image/i2.jpg' mode='widthFix' bindtap='openDetail'></image>
@@ -59,10 +59,10 @@
         <view class='right-content'>
           <view class='header'>
             <image src='/image/main-logo.jpg' class='logo'></image>
-            <view>第一期，美人计</view>
+            <view>第二期 美人计</view>
           </view>
           <view class='pic-container'>
-            <image class='pic' src='/image/i4.jpg' mode='widthFix' bindtap='openDetail'></image>
+            <image class='pic' src='/image/i11.jpg' mode='widthFix' bindtap='openDetail'></image>
           </view>
           
           <view class='footer'>
@@ -92,7 +92,7 @@
         <view class='right-content'>
           <view class='header'>
             <image src='/image/main-logo.jpg' class='logo'></image>
-            <view>第一期，美人计</view>
+            <view>第一期 宣纸</view>
           </view>
           <view class='pic-container'>
             <image class='pic' src='/image/i1.jpg' mode='widthFix' bindtap='openDetail'></image>
