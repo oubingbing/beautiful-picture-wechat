@@ -17,7 +17,7 @@
 <view class='container'>
   <view class='content'>
 
-    <view class='content-item'>
+    <view class='content-item' wx:for="{{list}}" wx:key="{{list}}">
       <view class='item-left'>
         <view class='point'></view>
         <view class='left-time'><view class='time'>2018.10.01</view></view>
@@ -26,109 +26,10 @@
         <view class='right-content'>
           <view class='header'>
             <image src='/image/main-logo.jpg' class='logo'></image>
-            <view>第三期 浮世绘</view>
+            <view>{{item.title}}</view>
           </view>
-          <view class='pic-container'>
-            <image class='pic' src='/image/i2.jpg' mode='widthFix' bindtap='openDetail'></image>
-          </view>
-          
-          <view class='footer'>
-            <view class='footer-item'>
-              <image class='icon' src='/image/view.png'></image>
-              <view>100</view>
-            </view>
-            <view class='footer-item'>
-              <image class='icon' src='/image/down-load.png'></image>
-              <view>下载</view>
-            </view>
-            <view class='footer-item'>
-              <image class='icon' src='/image/share.png'></image>
-              <view>分享</view>
-            </view>
-          </view>
-        </view>
-      </view>
-    </view>
-
-    <view class='content-item'>
-      <view class='item-left'>
-        <view class='point'></view>
-        <view class='left-time'><view class='time'>2018.10.01</view></view>
-      </view>
-      <view class='item-right'>
-        <view class='right-content'>
-          <view class='header'>
-            <image src='/image/main-logo.jpg' class='logo'></image>
-            <view>第二期 美人计</view>
-          </view>
-          <view class='pic-container'>
-            <image class='pic' src='/image/i11.jpg' mode='widthFix' bindtap='openDetail'></image>
-          </view>
-          
-          <view class='footer'>
-            <view class='footer-item'>
-              <image class='icon' src='/image/view.png'></image>
-              <view>100</view>
-            </view>
-            <view class='footer-item'>
-              <image class='icon' src='/image/down-load.png'></image>
-              <view>下载</view>
-            </view>
-            <view class='footer-item'>
-              <image class='icon' src='/image/share.png'></image>
-              <view>分享</view>
-            </view>
-          </view>
-        </view>
-      </view>
-    </view>
-
-    <view class='content-item'>
-      <view class='item-left'>
-        <view class='point'></view>
-        <view class='left-time'><view class='time'>2018.10.01</view></view>
-      </view>
-      <view class='item-right'>
-        <view class='right-content'>
-          <view class='header'>
-            <image src='/image/main-logo.jpg' class='logo'></image>
-            <view>第一期 宣纸</view>
-          </view>
-          <view class='pic-container'>
-            <image class='pic' src='/image/i1.jpg' mode='widthFix' bindtap='openDetail'></image>
-          </view>
-          
-          <view class='footer'>
-            <view class='footer-item'>
-              <image class='icon' src='/image/view.png'></image>
-              <view>100</view>
-            </view>
-            <view class='footer-item'>
-              <image class='icon' src='/image/down-load.png'></image>
-              <view>下载</view>
-            </view>
-            <view class='footer-item'>
-              <image class='icon' src='/image/share.png'></image>
-              <view>分享</view>
-            </view>
-          </view>
-        </view>
-      </view>
-    </view>
-
-    <view class='content-item'>
-      <view class='item-left'>
-        <view class='point'></view>
-        <view class='left-time'><view class='time'>2018.10.01</view></view>
-      </view>
-      <view class='item-right'>
-        <view class='right-content'>
-          <view class='header'>
-            <image src='/image/main-logo.jpg' class='logo'></image>
-            <view>第一期，美人计</view>
-          </view>
-          <view class='pic-container'>
-            <image class='pic' src='/image/i3.jpg' mode='widthFix' bindtap='openDetail'></image>
+          <view class='pic-container' bindtap='openDetail' data-id='{{item.id}}'>
+            <image class='pic' src='{{imageUrl+item.cover}}' mode='widthFix'></image>
           </view>
           
           <view class='footer'>

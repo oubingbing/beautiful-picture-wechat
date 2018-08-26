@@ -1,8 +1,3 @@
-
-const util = require("../../utils/util.js");
-const qiniuUploader = require("../../utils/qiniuUploader");
-const uploader = require("../../utils/uploadImage");
-
 const app = getApp()
 
 wx.onUserCaptureScreen(function (res) {
@@ -12,7 +7,9 @@ wx.onUserCaptureScreen(function (res) {
 Page({
   data: {
     show_auth:app.globalData.show_auth,
-    userInfo: {}
+    userInfo: {},
+    list:[],
+    imageUrl: app.globalData.imageUrl
   },
 
   onLoad: function (e) {
@@ -27,11 +24,37 @@ Page({
       }
     })
 
+    this.getList();
+
+  },
+
+  onReady(){
+    setInterval(function(){
+      console.log("后台运行运行中...");
+    },1000*10)
   },
   
   onShow: function (option) {
-
+    
   },
+
+  getList(){
+    let _this = this;
+    app.http("GET", "/picture/list", {}, function (res) {
+      let resData = res.data;
+      let list = _this.data.list;
+      if (resData.code == 0) {
+        resData.data.map(item => {
+          list.push(item)
+        })
+        console.log(list)
+        _this.setData({
+          list: list
+        })
+      }
+    })
+  },
+
   /**
    * 监听用户点击授权按钮
    */
@@ -76,9 +99,10 @@ Page({
   /**
    * 进入专辑详情页面
    */
-  openDetail: function () {
+  openDetail: function (e) {
+    let id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '/pages/album_detail/album_detail?type=0&new_message=1'
+      url: '/pages/album_detail/album_detail?id='+id
     })
   },
 })

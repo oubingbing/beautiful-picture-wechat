@@ -2,44 +2,8 @@
   <view class='content'>
     <view class='content-left'>
 
-      <view class='item'>
-        <image class='main-pic' mode='widthFix' src='/image/i2.jpg'></image>
-        <view class='footer'>
-          <view class='footer-item'>
-            <image class='icon' src='/image/collect-icon.png'></image>
-          </view>
-          <view class='footer-item'>
-            <image class='icon' src='/image/down-load.png'></image>
-            </view>
-        </view>
-      </view>
-
-      <view class='item'>
-        <image class='main-pic' mode='widthFix' src='/image/i3.jpg'></image>
-        <view class='footer'>
-          <view class='footer-item'>
-            <image class='icon' src='/image/collect-icon.png'></image>
-          </view>
-          <view class='footer-item'>
-            <image class='icon' src='/image/down-load.png'></image>
-            </view>
-        </view>
-      </view>
-
-      <view class='item'>
-        <image class='main-pic' mode='widthFix' src='/image/i5.jpg'></image>
-        <view class='footer'>
-          <view class='footer-item'>
-            <image class='icon' src='/image/collect-icon.png'></image>
-          </view>
-          <view class='footer-item'>
-            <image class='icon' src='/image/down-load.png'></image>
-            </view>
-        </view>
-      </view>
-
-      <view class='item'>
-        <image class='main-pic' mode='widthFix' src='/image/t1.jpg'></image>
+      <view class='item' wx:for="{{leftList}}" wx:key="{{leftList}}">
+        <image class='main-pic' mode='widthFix' src='{{imageUrl+item.pictureUrl}}'></image>
         <view class='footer'>
           <view class='footer-item'>
             <image class='icon' src='/image/collect-icon.png'></image>
@@ -54,44 +18,8 @@
 
     <view class='content-right'>
 
-      <view class='item'>
-        <image class='main-pic' mode='widthFix' src='/image/i1.jpg'></image>
-        <view class='footer'>
-          <view class='footer-item'>
-            <image class='icon' src='/image/collect-icon.png'></image>
-          </view>
-          <view class='footer-item'>
-            <image class='icon' src='/image/down-load.png'></image>
-            </view>
-        </view>
-      </view>
-
-      <view class='item'>
-        <image class='main-pic' mode='widthFix' src='/image/i7.jpg'></image>
-        <view class='footer'>
-          <view class='footer-item'>
-            <image class='icon' src='/image/collect-icon.png'></image>
-          </view>
-          <view class='footer-item'>
-            <image class='icon' src='/image/down-load.png'></image>
-            </view>
-        </view>
-      </view>
-
-      <view class='item'>
-        <image class='main-pic' mode='widthFix' src='/image/i4.jpg'></image>
-        <view class='footer'>
-          <view class='footer-item'>
-            <image class='icon' src='/image/collect-icon.png'></image>
-          </view>
-          <view class='footer-item'>
-            <image class='icon' src='/image/down-load.png'></image>
-            </view>
-        </view>
-      </view>
-
-      <view class='item'>
-        <image class='main-pic' mode='widthFix' src='/image/i8.jpg'></image>
+      <view class='item' wx:for="{{rightList}}" wx:key="{{rightList}}">
+        <image class='main-pic' mode='widthFix' src='{{imageUrl+item.pictureUrl}}'></image>
         <view class='footer'>
           <view class='footer-item'>
             <image class='icon' src='/image/collect-icon.png'></image>

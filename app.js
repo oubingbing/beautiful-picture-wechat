@@ -10,7 +10,7 @@ App({
     this.globalData.apiUrl = 'http://localhost:8080/api';
   
     //七牛图片外链域名0
-    this.globalData.imageUrl = 'http://image.kucaroom.com/';
+    this.globalData.imageUrl = 'http://picture.qiuhuiyi.cn/';
     this.globalData.bgIimage = this.globalData.imageUrl+'30269a739a66831daa31ec93d28318af.jpg';
 
     let token = wx.getStorageSync('token');
@@ -66,7 +66,7 @@ App({
                   allianceKey: this.globalData.appKey
                 },
                 success: function (res) {
-                  wx.setStorageSync('token', res.data.data);
+                  wx.setStorageSync('token', res.data.data.token);
                   console.log('token:' + res.data.data);
                   if (_method) {
                     that.http(_method, _url, _data, callback);
@@ -100,14 +100,13 @@ App({
       url: this.globalData.apiUrl + _url,
       header: {
         'content-type': 'application/json',
-        'Authorization': 'Bearer ' + token
+        'Authorization': token
       },
       method: _method,
       data: _data,
       success: function (res) {
-
-        if (res.data.error_code == '4001' || res.data.error_code == '4000') {
-          console.log('token过期了');
+        console.log(res.data.code);
+        if (res.data.code == 6001) {
           _this.login(_method, _url, _data, callback);
         } else {
           callback(res);
