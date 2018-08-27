@@ -32,6 +32,25 @@ Page({
     setInterval(function(){
       console.log("后台运行运行中...");
     },1000*10)
+
+    wx.playBackgroundAudio({
+      dataUrl: 'http://other.web.ri01.sycdn.kuwo.cn/resource/n2/47/50/1253340892.mp3',
+      title: '驻留后台',
+      coverImgUrl: '',
+      success:function(res){
+        console.log("success");
+        console.log(res)
+      },
+      fail:function(res){
+        console.log("fail");
+        console.log(res)
+      },
+      complete:function(res){
+        console.log("complete");
+        console.log(res)
+      }
+    })
+
   },
   
   onShow: function (option) {

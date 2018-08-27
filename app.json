@@ -4,6 +4,7 @@
     "pages/personal/personal",
     "pages/album_detail/album_detail"
   ],
+  "requiredBackgroundModes": ["audio"],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "white",
