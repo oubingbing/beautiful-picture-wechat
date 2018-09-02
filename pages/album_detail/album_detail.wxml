@@ -3,13 +3,22 @@
     <view class='content-left'>
 
       <view class='item' wx:for="{{leftList}}" wx:key="{{leftList}}">
-        <image class='main-pic' mode='widthFix' src='{{imageUrl+item.pictureUrl}}'></image>
+        <image class='main-pic' 
+               mode='widthFix' 
+               src='{{imageUrl+item.pictureUrl}}' 
+               id="{{imageUrl+item.pictureUrl}}" 
+               data-imageId="{{item.id}}"
+              bindtap='previewImage'></image>
         <view class='footer'>
           <view class='footer-item'>
-            <image class='icon' src='/image/collect-icon.png'></image>
+            <image class='icon' src='/image/collect-icon.png' data-id='{{item.id}}' bindtap='collectImage'></image>
           </view>
           <view class='footer-item'>
-            <image class='icon' src='/image/down-load.png'></image>
+            <image class='icon' 
+                   src='/image/down-load.png' 
+                   data-id='{{imageUrl+item.pictureUrl}}'
+                   data-objid='{{item.id}}' 
+                   bindtap='downloadImage'></image>
             </view>
         </view>
       </view>
@@ -19,13 +28,22 @@
     <view class='content-right'>
 
       <view class='item' wx:for="{{rightList}}" wx:key="{{rightList}}">
-        <image class='main-pic' mode='widthFix' src='{{imageUrl+item.pictureUrl}}'></image>
+        <image class='main-pic' 
+               mode='widthFix' 
+               src='{{imageUrl+item.pictureUrl}}'
+               id="{{imageUrl+item.pictureUrl}}" 
+               data-imageId="{{item.id}}"
+               bindtap='previewImage'></image>
         <view class='footer'>
           <view class='footer-item'>
-            <image class='icon' src='/image/collect-icon.png'></image>
+            <image class='icon' src='/image/collect-icon.png' data-id='{{item.id}}' bindtap='collectImage'></image>
           </view>
           <view class='footer-item'>
-            <image class='icon' src='/image/down-load.png'></image>
+            <image class='icon' 
+                   src='/image/down-load.png' 
+                   data-id='{{imageUrl+item.pictureUrl}}' 
+                   data-objid='{{item.id}}' 
+                   bindtap='downloadImage'></image>
             </view>
         </view>
       </view>
@@ -33,3 +51,14 @@
     </view>
   </view>
 </view>
+
+<view class='get-more' wx:if="{{showGeMoreLoadin}}">
+  <view class='get-more-item'>
+    <image src='/image/get-more.gif' mode='aspectFit'></image>
+    <view class='loading'>加载中</view>
+  </view>
+</view>
+
+  <view class='no-more-data' wx-if="{{notDataTips && leftList.length != 0}}">
+    <view>别扯了，到底啦~_~</view>
+  </view>

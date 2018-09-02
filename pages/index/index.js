@@ -9,7 +9,12 @@ Page({
     show_auth:app.globalData.show_auth,
     userInfo: {},
     list:[],
-    imageUrl: app.globalData.imageUrl
+    imageUrl: app.globalData.imageUrl,
+    pageSize: 10,
+    pageNumber: 0,
+    initPageNumber: 0,
+    showGeMoreLoadin: false,
+    notDataTips:false
   },
 
   onLoad: function (e) {
@@ -29,30 +34,82 @@ Page({
   },
 
   onReady(){
-    setInterval(function(){
-      console.log("后台运行运行中...");
-    },1000*10)
   },
   
   onShow: function (option) {
     
   },
 
+  downloadImage: function (e) {
+    let id = e.currentTarget.dataset.id;
+    let objId = e.currentTarget.dataset.objid;
+    let _this = this;
+    wx.showLoading({
+      title: '图片保存中...',
+    });
+    console.log(id)
+    wx.downloadFile({
+      url: id,
+      success: function (res) {
+        if (res.statusCode === 200) {
+          wx.saveImageToPhotosAlbum({
+            filePath: res.tempFilePath,
+            success(res) {
+              wx.hideLoading();
+              _this.saveDownload(objId,1);
+            },
+            fail(res) {
+              wx.showToast({
+                title: '保存图片失败！',
+              })
+            }
+          })
+        }
+      }
+    })
+
+  },
+
+  saveDownload: function (id,type) {
+    app.http("POST", `/picture/download_log/${id}`, {type:type}, function (res) {
+      let resData = res.data;
+      console.log(resData)
+    })
+  },
+
   getList(){
     let _this = this;
-    app.http("GET", "/picture/list", {}, function (res) {
+    app.http("GET", "/picture/list"+`?pageSize=${ this.data.pageSize }&pageNumber=${ this.data.pageNumber }`, {}, function (res) {
+      _this.setData({ showGeMoreLoadin: false })
       let resData = res.data;
       let list = _this.data.list;
       if (resData.code == 0) {
-        resData.data.map(item => {
-          list.push(item)
-        })
-        console.log(list)
-        _this.setData({
-          list: list
-        })
+        if(resData.data.length > 0){
+          resData.data.map(item => {
+            list.push(item)
+          })
+          console.log(list)
+          _this.setData({
+            list: list,
+            pageNumber: _this.data.pageNumber + 1
+          })
+        }else{
+          _this.setData({ notDataTips:true})
+        }
       }
     })
+  },
+
+  /**
+   * 上拉加载更多
+   */
+  onReachBottom: function () {
+    console.log('到底了');
+    this.setData({ 
+      showGeMoreLoadin: true,
+      notDataTips:false
+    })
+    this.getList();
   },
 
   /**
@@ -66,8 +123,7 @@ Page({
 
     let _this = this;
     app.login(null, null, null, function(){
-      _this.getPost(_this);
-      _this.topic();
+      _this.getList();
       console.log('加载信息');
     });
   },

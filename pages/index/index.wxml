@@ -37,8 +37,12 @@
               <image class='icon' src='/image/view.png'></image>
               <view>100</view>
             </view>
-            <view class='footer-item'>
-              <image class='icon' src='/image/down-load.png'></image>
+            <view class='footer-item' 
+                  data-id='{{imageUrl+item.cover}}' 
+                  data-objid='{{item.id}}' 
+                  bindtap='downloadImage'>
+              <image class='icon' 
+                     src='/image/down-load.png'></image>
               <view>下载</view>
             </view>
             <view class='footer-item'>
@@ -52,5 +56,18 @@
 
   </view>
 </view>
+
+  <view class='get-more' wx:if="{{showGeMoreLoadin}}">
+    <view class='get-more-item'>
+      <image src='/image/get-more.gif' mode='aspectFit'></image>
+      <view class='loading'>加载中</view>
+    </view>
+  </view>
+
+  <view class='no-more-data' wx-if="{{notDataTips && list.length != 0}}">
+    <view>别扯了，到底啦~_~</view>
+  </view>
+
+
 
 
