@@ -15,5 +15,11 @@ Page({
       backgroundColor: '#f78ca0'
     })
   },
+  openLog: function (e) {
+    let type = e.currentTarget.dataset.type;
+    wx.navigateTo({
+      url: '/pages/history/history?type=' + type
+    })
+  },
  
 })

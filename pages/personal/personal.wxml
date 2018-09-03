@@ -4,17 +4,17 @@
       <view class='nickname'>叶子</view>
   </view>
 
-  <view class='item collect'>
+  <view class='item collect' bindtap='openLog' data-type='1'>
     <image src='/image/white-view.png'></image>
     <view class='label'>浏览记录</view>
   </view>
 
-  <view class='item visit-history'>
+  <view class='item visit-history' bindtap='openLog' data-type='2'>
     <image src='/image/white-collect.png'></image>
     <view class='label'>收藏图片</view>
   </view>
 
-  <view class='item down-load'>
+  <view class='item down-load' bindtap='openLog' data-type='3'>
     <image src='/image/white-down-load.png'></image>
     <view class='label'>下载历史</view>
   </view>

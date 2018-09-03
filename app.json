@@ -2,9 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/personal/personal",
-    "pages/album_detail/album_detail"
+    "pages/album_detail/album_detail",
+    "pages/history/history"
   ],
-  "requiredBackgroundModes": ["audio"],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "white",
