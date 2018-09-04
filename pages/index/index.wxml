@@ -19,8 +19,8 @@
 
     <view class='content-item' wx:for="{{list}}" wx:key="{{list}}">
       <view class='item-left'>
-        <view class='point'></view>
-        <view class='left-time'><view class='time'>2018.10.01</view></view>
+        <view class='point' style="background:{{item.color}}"></view>
+        <view class='left-time'><view class='time'>{{item.date}}</view></view>
       </view>
       <view class='item-right'>
         <view class='right-content'>

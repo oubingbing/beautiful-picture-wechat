@@ -11,7 +11,8 @@
               bindtap='previewImage'></image>
         <view class='footer'>
           <view class='footer-item'>
-            <image class='icon' src='/image/collect-icon.png' data-id='{{item.id}}' bindtap='collectImage'></image>
+            <image class='icon' src='/image/collect-icon.png' data-id='{{item.id}}' bindtap='collectImage' wx:if="{{item.collect == 0}}"></image>
+            <image class='icon' src='/image/collect.png' data-id='{{item.id}}' bindtap='cancelCollect' wx:if="{{item.collect == 1}}"></image>
           </view>
           <view class='footer-item'>
             <image class='icon' 
@@ -36,7 +37,8 @@
                bindtap='previewImage'></image>
         <view class='footer'>
           <view class='footer-item'>
-            <image class='icon' src='/image/collect-icon.png' data-id='{{item.id}}' bindtap='collectImage'></image>
+            <image class='icon' src='/image/collect-icon.png' data-id='{{item.id}}' bindtap='collectImage' wx:if="{{item.collect == 0}}"></image>
+            <image class='icon' src='/image/collect.png' data-id='{{item.id}}' bindtap='cancelCollect' wx:if="{{item.collect == 1}}"></image>
           </view>
           <view class='footer-item'>
             <image class='icon' 

@@ -6,8 +6,8 @@ App({
 
     //设置基本接口全局变量
 
-    //this.globalData.apiUrl = 'https://weimei.qiuhuiyi.cn/api';
-    this.globalData.apiUrl = 'http://localhost:8080';
+    this.globalData.apiUrl = 'https://weimei.qiuhuiyi.cn/api';
+    //this.globalData.apiUrl = 'http://localhost:8080';
   
     //七牛图片外链域名0
     this.globalData.imageUrl = 'http://picture.qiuhuiyi.cn/';

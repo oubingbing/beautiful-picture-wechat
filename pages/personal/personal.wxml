@@ -1,7 +1,7 @@
 <view class='container'>
   <view class='header'>
-    <image src='https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIRSkNHofic4wB9oyZrFBybUGjozW4DKtGJYWTWORATffxUtFLt1Cm3ibP0YVtfRicERVhsSickhgZic2w/132'></image>
-      <view class='nickname'>叶子</view>
+    <image src='{{user.avatar}}'></image>
+      <view class='nickname'>{{user.nickname}}</view>
   </view>
 
   <view class='item collect' bindtap='openLog' data-type='1'>

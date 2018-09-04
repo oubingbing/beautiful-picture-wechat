@@ -37,7 +37,6 @@ page{
   width: 25rpx;
   height: 25rpx;
   border-radius: 13rpx;
-  background: darkorchid;
   position: absolute;
   z-index: 90;
   left: 27rpx;

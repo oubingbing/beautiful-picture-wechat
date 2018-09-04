@@ -35,6 +35,9 @@ Page({
     this.getList();
   },
 
+  /**
+   * 下载图片
+   */
   downloadImage:function(e){
     let id = e.currentTarget.dataset.id;
     let objId = e.currentTarget.dataset.objid;
@@ -65,6 +68,9 @@ Page({
 
   },
 
+  /**
+   * 保存下载图片记录
+   */
   saveDownload:function(id,type){
     app.http("POST", `/picture/download_log/${id}`, {type:type}, function (res) {
       let resData = res.data;
@@ -72,18 +78,69 @@ Page({
     })
   },
 
+  /**
+   * 收藏图片
+   */
   collectImage:function(e){
     let id = e.currentTarget.dataset.id;
-    wx.saveImageToPhotosAlbum({
-      filePath:id,
-      success(res) {
-        console.log();
-      }
-    })
-
+    let _this = this;
     app.http("POST", `/picture/collect/${id}`, {}, function (res) {
       let resData = res.data;
+      let leftList = _this.data.leftList;
+      let rightList = _this.data.rightList;
       console.log(resData)
+      if (resData.code == 0) {
+        leftList.map(item => {
+          if (item.id == id) {
+            item.collect = 1;
+          }
+          return item;
+        })
+        rightList.map(item => {
+          if (item.id == id) {
+            item.collect = 1;
+          }
+          return item;
+        })
+
+        _this.setData({
+          leftList: leftList,
+          rightList: rightList,
+        })
+      }
+    })
+  },
+
+  /**
+   * 取消收藏
+   */
+  cancelCollect:function(e){
+    let id = e.currentTarget.dataset.id;
+    let _this = this;
+    app.http("POST", `/picture/collect/${id}/cancel`, {}, function (res) {
+      let resData = res.data;
+      let leftList = _this.data.leftList;
+      let rightList = _this.data.rightList;
+      console.log(resData)
+      if(resData.code == 0){
+        leftList.map(item=>{
+          if(item.id == id){
+            item.collect = 0;
+          }
+          return item;
+        })
+        rightList.map(item=>{
+          if(item.id == id){
+            item.collect = 0;
+          }
+          return item;
+        })
+
+        _this.setData({
+          leftList: leftList,
+          rightList: rightList,
+        })
+      }
     })
   },
 
@@ -113,6 +170,9 @@ Page({
     })
   },
 
+  /**
+   * 获取图集列表
+   */
   getList:function(){
     let _this = this;
     app.http("GET", "/picture/detail/" + _this.data.id + `?pageSize=${this.data.pageSize}&pageNumber=${this.data.pageNumber}`, {}, function (res) {
