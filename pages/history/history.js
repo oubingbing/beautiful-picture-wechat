@@ -19,7 +19,7 @@ Page({
   onLoad: function (option) {
     this.setData({ objType:option.type})
     let objType = option.type;
-    this.getList(objType)
+    this.getList(objType);
   },
 
   onReady: function () {
@@ -99,12 +99,15 @@ Page({
     switch (objType) {
       case "1":
         this.getViewList();
+        wx.setNavigationBarTitle({title: '我的浏览'})
         break;
       case "2":
         this.getCollectList();
+        wx.setNavigationBarTitle({ title: '我的收藏'})
         break;
       case "3":
         this.getDownloadList();
+        wx.setNavigationBarTitle({ title: '我的下载' })
         break;
     }
   },

@@ -16,7 +16,6 @@
 
 <view class='container'>
   <view class='content'>
-
     <view class='content-item' wx:for="{{list}}" wx:key="{{list}}">
       <view class='item-left'>
         <view class='point' style="background:{{item.color}}"></view>
@@ -46,8 +45,10 @@
               <view>下载</view>
             </view>
             <view class='footer-item'>
-              <image class='icon' src='/image/share.png'></image>
-              <view>分享</view>
+              <button class='button' open-type="share" style='border: none;' id='{{item.id}}'>
+                <image class='icon' src='/image/share.png'></image>
+                <view>分享</view>
+              </button>
             </view>
           </view>
         </view>

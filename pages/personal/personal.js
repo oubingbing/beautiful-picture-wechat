@@ -49,4 +49,20 @@ Page({
     })
   },
  
+  /**
+  * 分享
+  */
+  onShareAppMessage: function (res) {
+    return {
+      title: '唯美图吧，唯美生活',
+      path: '/pages/index/index',
+      //imageUrl: '/image/share1.jpg',
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
+  },
 })

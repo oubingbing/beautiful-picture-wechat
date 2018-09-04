@@ -1,9 +1,5 @@
 const app = getApp()
 
-wx.onUserCaptureScreen(function (res) {
-  console.log("res：" + JSON.stringify(res));
-})
-
 Page({
   data: {
     show_auth:app.globalData.show_auth,
@@ -14,10 +10,14 @@ Page({
     pageNumber: 0,
     initPageNumber: 0,
     showGeMoreLoadin: false,
-    notDataTips:false
+    notDataTips:false,
+    sharecomeIn:false
   },
 
   onLoad: function (e) {
+    if(e.id != undefined){
+      this.setData({ sharecomeIn:true})
+    }
     let that = this;
     wx.getSetting({
       success(res) {
@@ -25,12 +25,18 @@ Page({
           that.setData({
             show_auth:true
           });
+        }else{
+          if (e.id != undefined) {
+            that.setData({ sharecomeIn: false })
+            wx.navigateTo({
+              url: '/pages/album_detail/album_detail?id=' + e.id
+            })
+          }
         }
       }
     })
 
     this.getList();
-
   },
 
   onReady(){
@@ -47,7 +53,6 @@ Page({
     wx.showLoading({
       title: '图片保存中...',
     });
-    console.log(id)
     wx.downloadFile({
       url: id,
       success: function (res) {
@@ -73,7 +78,6 @@ Page({
   saveDownload: function (id,type) {
     app.http("POST", `/picture/download_log/${id}`, {type:type}, function (res) {
       let resData = res.data;
-      console.log(resData)
     })
   },
 
@@ -88,7 +92,6 @@ Page({
           resData.data.map(item => {
             list.push(item)
           })
-          console.log(list)
           _this.setData({
             list: list,
             pageNumber: _this.data.pageNumber + 1
@@ -104,7 +107,6 @@ Page({
    * 上拉加载更多
    */
   onReachBottom: function () {
-    console.log('到底了');
     this.setData({ 
       showGeMoreLoadin: true,
       notDataTips:false
@@ -123,8 +125,14 @@ Page({
 
     let _this = this;
     app.login(null, null, null, function(){
+      let sharecomeIn = _this.data.sharecomeIn;
+      if(sharecomeIn == true){
+        _this.setData({ sharecomeIn: false })
+        wx.navigateTo({
+          url: '/pages/album_detail/album_detail?id=' + e.id
+        })
+      }
       _this.getList();
-      console.log('加载信息');
     });
   },
 
@@ -133,17 +141,11 @@ Page({
  * 预览图片
  */
   previewMoreImage: function (event) {
-
-    console.log(event.target.id);
-    console.log(event.currentTarget.dataset.obj);
-
     let _this = this;
 
     let images = event.currentTarget.dataset.obj.map(item=>{
       return _this.data.baseImageUrl+item;
     });
-
-    console.log(images);
 
     let url = event.target.id;
 
@@ -160,5 +162,27 @@ Page({
     wx.navigateTo({
       url: '/pages/album_detail/album_detail?id='+id
     })
+  },
+
+  /**
+   * 分享
+   */
+  onShareAppMessage: function (res) {
+    let id = '';
+    if (res.target != undefined){
+      id = res.target.id;
+    }
+
+    return {
+      title: '唯美图吧，唯美生活',
+      path: '/pages/index/index?id='+id,
+      //imageUrl: '/image/share1.jpg',
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
   },
 })
