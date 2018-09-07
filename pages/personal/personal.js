@@ -35,6 +35,16 @@ Page({
   },
 
   /**
+   * 浏览历史记录
+   */
+  openAbout: function (e) {
+    let type = e.currentTarget.dataset.type;
+    wx.navigateTo({
+      url: '/pages/about/about'
+    })
+  },
+
+  /**
    * 获取用户信息
    */
   userInfo: function () {

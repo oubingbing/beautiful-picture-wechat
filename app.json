@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/personal/personal",
     "pages/album_detail/album_detail",
-    "pages/history/history"
+    "pages/history/history",
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,7 +22,7 @@
         "pagePath": "pages/index/index",
         "iconPath": "image/pic.png",
         "selectedIconPath": "image/select-pic.png",
-        "text": "专辑"
+        "text": "图辑"
       },
       {
         "pagePath": "pages/personal/personal",
