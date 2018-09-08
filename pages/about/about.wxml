@@ -1,32 +1,32 @@
 <view class='container'>
   <view class='content'>
     <view class='header'>
-      <image src='/image/main-logo.jpg'></image>
+      <image src='{{imageUrl+about.logo}}'></image>
     </view>
-    <view class='description'>
+    <view class='description' wx:if="{{about.description != ''}}">
       <view class='description-detail'>
-        腾讯网是腾讯公司推出的集新闻信息、互动社区、娱乐产品和基础服务为一体的大型综合门户网站。腾讯网服务于全球华人用户，致力成为最具传播力和互动性，权威、主流、时尚的互联网媒体平台。通过强大的实时新闻和全面深入的信息资讯服务，为中国数以亿计的互联网用户提供富有创意的网上新生活。
+        {{about.description}}
       </view>
     </view>
     <view class='contact'>
-      <view class='contact-item'>
+      <view class='contact-item' wx:if="{{about.publicNumber != ''}}">
         <image src='/image/public-number.png'></image>
-        <view class='right'>bingbing_ou（公众号）</view>
+        <view class='right'>{{about.publicNumber}}（公众号）</view>
       </view>
-      <view class='contact-item'>
+      <view class='contact-item' wx:if="{{about.weChatNumber != ''}}">
         <image src='/image/wechat.png'></image>
-        <view class='right'>bignbing</view>
+        <view class='right'>{{about.weChatNumber}}</view>
       </view>
-        <view class='contact-item'>
+        <view class='contact-item' wx:if="{{about.phone != ''}}">
         <image src='/image/phone.png'></image>
-        <view class='right'>13425144866</view>
+        <view class='right'>{{about.phone}}</view>
       </view>
-      <view class='contact-item'>
+      <view class='contact-item' wx:if="{{about.email != ''}}">
         <image src='/image/email.png'></image>
-        <view class='right'>bingbing@outlook.com</view>
+        <view class='right'>{{about.email}}</view>
       </view>
-      <view class='footer'>
-        <view><image src='/image/qr_code.gif'></image></view>
+      <view class='footer' wx:if="{{about.qrCode != ''}}">
+        <view><image src='{{imageUrl+about.qrCode}}'></image></view>
       </view>
     </view>
   </view>

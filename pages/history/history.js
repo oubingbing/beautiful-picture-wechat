@@ -140,12 +140,14 @@ Page({
         if (resData.data.length > 0) {
           resData.data.map(item => {
             if (item.pictureInfo != null){
-              if (leftHeight <= rightHeigt) {
-                leftList.push(item);
-                leftHeight += item.pictureInfo.height;
-              } else {
-                rightList.push(item)
-                rightHeigt += item.pictureInfo.height;
+              if(item.pictureInfo != null){
+                if (leftHeight <= rightHeigt) {
+                  leftList.push(item);
+                  leftHeight += item.pictureInfo.height;
+                } else {
+                  rightList.push(item)
+                  rightHeigt += item.pictureInfo.height;
+                }
               }
             }
           })
@@ -182,12 +184,14 @@ Page({
       if (resData.code == 0) {
         if (resData.data.length > 0) {
           resData.data.map(item => {
-            if (leftHeight <= rightHeigt) {
-              leftList.push(item);
-              leftHeight += item.pictureInfo.height;
-            } else {
-              rightList.push(item)
-              rightHeigt += item.pictureInfo.height;
+            if(item.pictureInfo != null){
+              if (leftHeight <= rightHeigt) {
+                leftList.push(item);
+                leftHeight += item.pictureInfo.height;
+              } else {
+                rightList.push(item)
+                rightHeigt += item.pictureInfo.height;
+              }
             }
           })
           _this.setData({
@@ -223,12 +227,14 @@ Page({
       if (resData.code == 0) {
         if (resData.data.length > 0) {
           resData.data.map(item => {
-            if (leftHeight <= rightHeigt) {
-              leftList.push(item);
-              leftHeight += item.pictureInfo.height;
-            } else {
-              rightList.push(item)
-              rightHeigt += item.pictureInfo.height;
+            if(item.pictureInfo != null){
+              if (leftHeight <= rightHeigt) {
+                leftList.push(item);
+                leftHeight += item.pictureInfo.height;
+              } else {
+                rightList.push(item)
+                rightHeigt += item.pictureInfo.height;
+              }
             }
           })
           _this.setData({

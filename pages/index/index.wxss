@@ -80,12 +80,13 @@ page{
   align-items: center;
   font-size: 30rpx;
   color: gray;
+  padding-bottom: 15rpx;
 }
 
 .header .logo{
-  width: 90rpx;
-  height: 90rpx;
-  border-radius: 45rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
 }
 
 .item-right .right-content{

@@ -169,19 +169,34 @@ Page({
    */
   onShareAppMessage: function (res) {
     let id = '';
+    let url  = res;
     if (res.target != undefined){
       id = res.target.id;
+      url = res.target.dataset.image;
     }
 
-    return {
-      title: '唯美图吧，唯美生活',
-      path: '/pages/index/index?id='+id,
-      //imageUrl: '/image/share1.jpg',
-      success: function (res) {
-        // 转发成功
-      },
-      fail: function (res) {
-        // 转发失败
+    if(url != ''){
+      return {
+        title: '唯美图吧，唯美生活',
+        path: '/pages/index/index?id=' + id,
+        imageUrl: url,
+        success: function (res) {
+          // 转发成功
+        },
+        fail: function (res) {
+          // 转发失败
+        }
+      }
+    }else{
+      return {
+        title: '唯美图吧，唯美生活',
+        path: '/pages/index/index?id=' + id,
+        success: function (res) {
+          // 转发成功
+        },
+        fail: function (res) {
+          // 转发失败
+        }
       }
     }
   },
