@@ -87,6 +87,15 @@ page{
   width: 80rpx;
   height: 80rpx;
   border-radius: 40rpx;
+  margin-right: 15rpx;
+}
+
+.content-word{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 35rpx;
+  margin-bottom: 20rpx;
 }
 
 .item-right .right-content{

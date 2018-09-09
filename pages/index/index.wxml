@@ -13,7 +13,6 @@
   </view>
 </view>
 
-
 <view class='container'>
   <view class='content'>
     <view class='content-item' wx:for="{{list}}" wx:key="{{list}}">
@@ -27,6 +26,9 @@
             <image  class='logo' src="{{imageUrl+item.logo}}" wx:if="{{item.logo != ''}}"></image>
             <view wx:if="{{item.title != ''}}">{{item.title}}</view>
           </view>
+          <view class='content-word' wx:if="{{item.content != ''}}">
+            <view>{{item.content}}</view>
+          </view>
           <view class='pic-container' bindtap='openDetail' data-id='{{item.id}}'>
             <image class='pic' src='{{imageUrl+item.cover}}' mode='widthFix'></image>
           </view>
@@ -34,7 +36,7 @@
           <view class='footer'>
             <view class='footer-item'>
               <image class='icon' src='/image/view.png'></image>
-              <view>100</view>
+              <view>{{item.view}}</view>
             </view>
             <view class='footer-item' 
                   data-id='{{imageUrl+item.cover}}' 
