@@ -13,6 +13,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let aboutStorage = wx.getStorageSync('about');
+    console.log(aboutStorage)
+    if (aboutStorage) {
+      this.setData({
+        about: aboutStorage
+      })
+    }
     this.getAbout();
   },
 
@@ -33,7 +40,37 @@ Page({
       console.log(resData)
       if (resData.code == 0) {
         _this.setData({ about: resData.data });
+        wx.setStorageSync('about', resData.data);
       }
     })
+  },
+  /**
+* 分享
+*/
+  onShareAppMessage: function (res) {
+    if (app.globalData.shareImage == '') {
+      return {
+        title: '唯美图吧，唯美生活',
+        path: '/pages/index/index?id=' + id,
+        success: function (res) {
+          // 转发成功
+        },
+        fail: function (res) {
+          // 转发失败
+        }
+      }
+    } else {
+      return {
+        title: app.globalData.shareWord,
+        path: '/pages/index/index',
+        imageUrl: app.globalData.imageUrl + app.globalData.shareImage,
+        success: function (res) {
+          // 转发成功
+        },
+        fail: function (res) {
+          // 转发失败
+        }
+      }
+    }
   },
 })
