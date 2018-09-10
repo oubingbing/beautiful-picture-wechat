@@ -11,10 +11,6 @@ Page({
   },
 
   onLoad: function () {
-    wx.setNavigationBarColor({
-      frontColor: '#ffffff',
-      backgroundColor: '#f78ca0'
-    })
     let userStorage = wx.getStorageSync('user');
     if (userStorage) {
       this.setData({
