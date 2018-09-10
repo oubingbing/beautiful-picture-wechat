@@ -39,7 +39,7 @@ page{
   border-radius: 13rpx;
   position: absolute;
   z-index: 90;
-  left: 27rpx;
+  left: 28rpx;
   top: 40rpx;
 }
 
