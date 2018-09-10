@@ -2,17 +2,19 @@
 App({
   onLaunch: function () {
 
+    //替换成自己的
     this.globalData.appKey = '9d43e1fe75c4447997';
 
     //设置基本接口全局变量
-
-    //this.globalData.apiUrl = 'https://weimei.qiuhuiyi.cn/api';
-    this.globalData.apiUrl = 'http://localhost:8080';
+    this.globalData.apiUrl = 'https://weimei.qiuhuiyi.cn/api';
+    //this.globalData.apiUrl = 'http://localhost:8080';
   
     //七牛图片外链域名0
     this.globalData.imageUrl = 'http://picture.qiuhuiyi.cn/';
     this.globalData.bgIimage = this.globalData.imageUrl+'30269a739a66831daa31ec93d28318af.jpg';
 
+    this.shareImage='';
+    this.shareWord='';
     let token = wx.getStorageSync('token');
     if (!token) {
       let _this = this;
@@ -157,14 +159,10 @@ App({
     appId:null,
     userInfo: null,
     apiUrl: null,
-    color: '0aecc3',
     imageUrl:'',
-    bgImage:'',
-    changeSchoolPost:false,
-    changeSchoolSale: false,
-    changeSchoolMatch: false,
     showNormal:false,
     showAudit:false,
-    postHelp:false
+    shareImage:'',
+    shareWord:''
   }
 })

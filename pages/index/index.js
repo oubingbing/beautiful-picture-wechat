@@ -40,6 +40,7 @@ Page({
   },
 
   onReady(){
+    this.shareInfo()
   },
   
   onShow: function (option) {
@@ -73,6 +74,18 @@ Page({
       }
     })
 
+  },
+
+  shareInfo: function (id, type) {
+    app.http("GET", `/app/share`,{}, function (res) {
+      console.log(res)
+      let resData = res.data;
+      if(resData.code ==0){
+        console.log(resData.data.shareImage)
+        app.globalData.shareImage = resData.data.shareImage;
+        app.globalData.shareWord = resData.data.shareWord;
+      }
+    })
   },
 
   saveDownload: function (id,type) {
@@ -169,19 +182,49 @@ Page({
    */
   onShareAppMessage: function (res) {
     let id = '';
+    let url  = res;
     if (res.target != undefined){
       id = res.target.id;
+      url = res.target.dataset.image;
     }
 
-    return {
-      title: '唯美图吧，唯美生活',
-      path: '/pages/index/index?id='+id,
-      //imageUrl: '/image/share1.jpg',
-      success: function (res) {
-        // 转发成功
-      },
-      fail: function (res) {
-        // 转发失败
+    console.log("url:"+url)
+    if(id != ''){
+      return {
+        title: '唯美图吧，唯美生活',
+        path: '/pages/index/index?id=' + id,
+        imageUrl: url,
+        success: function (res) {
+          // 转发成功
+        },
+        fail: function (res) {
+          // 转发失败
+        }
+      }
+    }else{
+      if (app.globalData.shareImage == ''){
+        return {
+          title: '唯美图吧，唯美生活',
+          path: '/pages/index/index?id=' + id,
+          success: function (res) {
+            // 转发成功
+          },
+          fail: function (res) {
+            // 转发失败
+          }
+        }
+      }else{
+        return {
+          title: app.globalData.shareWord,
+          path: '/pages/index/index?id=' + id,
+          imageUrl: app.globalData.imageUrl + app.globalData.shareImage,
+          success: function (res) {
+            // 转发成功
+          },
+          fail: function (res) {
+            // 转发失败
+          }
+        }
       }
     }
   },

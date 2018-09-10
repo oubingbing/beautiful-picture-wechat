@@ -140,12 +140,14 @@ Page({
         if (resData.data.length > 0) {
           resData.data.map(item => {
             if (item.pictureInfo != null){
-              if (leftHeight <= rightHeigt) {
-                leftList.push(item);
-                leftHeight += item.pictureInfo.height;
-              } else {
-                rightList.push(item)
-                rightHeigt += item.pictureInfo.height;
+              if(item.pictureInfo != null){
+                if (leftHeight <= rightHeigt) {
+                  leftList.push(item);
+                  leftHeight += item.pictureInfo.height;
+                } else {
+                  rightList.push(item)
+                  rightHeigt += item.pictureInfo.height;
+                }
               }
             }
           })
@@ -182,12 +184,14 @@ Page({
       if (resData.code == 0) {
         if (resData.data.length > 0) {
           resData.data.map(item => {
-            if (leftHeight <= rightHeigt) {
-              leftList.push(item);
-              leftHeight += item.pictureInfo.height;
-            } else {
-              rightList.push(item)
-              rightHeigt += item.pictureInfo.height;
+            if(item.pictureInfo != null){
+              if (leftHeight <= rightHeigt) {
+                leftList.push(item);
+                leftHeight += item.pictureInfo.height;
+              } else {
+                rightList.push(item)
+                rightHeigt += item.pictureInfo.height;
+              }
             }
           })
           _this.setData({
@@ -223,12 +227,14 @@ Page({
       if (resData.code == 0) {
         if (resData.data.length > 0) {
           resData.data.map(item => {
-            if (leftHeight <= rightHeigt) {
-              leftList.push(item);
-              leftHeight += item.pictureInfo.height;
-            } else {
-              rightList.push(item)
-              rightHeigt += item.pictureInfo.height;
+            if(item.pictureInfo != null){
+              if (leftHeight <= rightHeigt) {
+                leftList.push(item);
+                leftHeight += item.pictureInfo.height;
+              } else {
+                rightList.push(item)
+                rightHeigt += item.pictureInfo.height;
+              }
             }
           })
           _this.setData({
@@ -300,5 +306,33 @@ Page({
     })
     this.viewPicture(id, 2);
   },
-
+  /**
+ * 分享
+ */
+  onShareAppMessage: function (res) {
+    if (app.globalData.shareImage == '') {
+      return {
+        title: '唯美图吧，唯美生活',
+        path: '/pages/index/index?id=' + id,
+        success: function (res) {
+          // 转发成功
+        },
+        fail: function (res) {
+          // 转发失败
+        }
+      }
+    } else {
+      return {
+        title: app.globalData.shareWord,
+        path: '/pages/index/index',
+        imageUrl: app.globalData.imageUrl + app.globalData.shareImage,
+        success: function (res) {
+          // 转发成功
+        },
+        fail: function (res) {
+          // 转发失败
+        }
+      }
+    }
+  },
 })

@@ -19,7 +19,7 @@
     <view class='label'>下载历史</view>
   </view>
 
-  <view class='item about-us'>
+  <view class='item about-us' bindtap='openAbout'>
     <image src='/image/us.png'></image>
     <view class='label'>关于我们</view>
   </view>
