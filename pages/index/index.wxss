@@ -40,7 +40,7 @@ page{
   position: absolute;
   z-index: 90;
   left: 28rpx;
-  top: 40rpx;
+  top: 39rpx;
 }
 
 .content-item .item-right{
