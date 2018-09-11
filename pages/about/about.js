@@ -48,28 +48,15 @@ Page({
 * 分享
 */
   onShareAppMessage: function (res) {
-    if (app.globalData.shareImage == '') {
-      return {
-        title: '唯美图吧，唯美生活',
-        path: '/pages/index/index?id=' + id,
-        success: function (res) {
-          // 转发成功
-        },
-        fail: function (res) {
-          // 转发失败
-        }
-      }
-    } else {
-      return {
-        title: app.globalData.shareWord,
-        path: '/pages/index/index',
-        imageUrl: app.globalData.imageUrl + app.globalData.shareImage,
-        success: function (res) {
-          // 转发成功
-        },
-        fail: function (res) {
-          // 转发失败
-        }
+    return {
+      title: app.globalData.shareWord,
+      path: '/pages/index/index',
+      imageUrl: app.globalData.imageUrl + app.globalData.shareImage,
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
       }
     }
   },

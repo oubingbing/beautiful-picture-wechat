@@ -16,6 +16,7 @@ Page({
   },
 
   onLoad: function (e) {
+    console.log("e.id是什么："+e.id);
     if(e.id != undefined){
       this.setData({ sharecomeIn: true, detailId:e.id})
     }
@@ -218,7 +219,7 @@ Page({
       }else{
         return {
           title: app.globalData.shareWord,
-          path: '/pages/index/index?id=' + id,
+          path: '/pages/index/index',
           imageUrl: app.globalData.imageUrl + app.globalData.shareImage,
           success: function (res) {
             // 转发成功

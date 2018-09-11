@@ -157,24 +157,6 @@ page{
   height: 40rpx;
 }
 
-.content-item .description{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  z-index: 100;
-  bottom: 0rpx;
-  background: black;
-  color: white;
-  background:rgba(2,2,2,0.4);
-  padding: 10rpx;
-}
-
-.description .description-word{
-  padding-bottom: 5rpx;
-  font-size: 35rpx;
-}
-
 /** 授权按钮 **/
 .auth-container{
   position: fixed;
