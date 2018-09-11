@@ -11,12 +11,13 @@ Page({
     initPageNumber: 0,
     showGeMoreLoadin: false,
     notDataTips:false,
-    sharecomeIn:false
+    sharecomeIn:false,
+    detailId:''
   },
 
   onLoad: function (e) {
     if(e.id != undefined){
-      this.setData({ sharecomeIn:true})
+      this.setData({ sharecomeIn: true, detailId:e.id})
     }
     let that = this;
     wx.getSetting({
@@ -139,10 +140,11 @@ Page({
     let _this = this;
     app.login(null, null, null, function(){
       let sharecomeIn = _this.data.sharecomeIn;
+      let detailId = _this.data.detailId;
       if(sharecomeIn == true){
         _this.setData({ sharecomeIn: false })
         wx.navigateTo({
-          url: '/pages/album_detail/album_detail?id=' + e.id
+          url: '/pages/album_detail/album_detail?id='+detailId
         })
       }
       _this.getList();
