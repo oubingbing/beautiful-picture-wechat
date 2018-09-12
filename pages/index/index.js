@@ -20,6 +20,7 @@ Page({
     if(e.id != undefined){
       this.setData({ sharecomeIn: true, detailId:e.id})
     }
+    let eId = e.id;
     let that = this;
     wx.getSetting({
       success(res) {
@@ -28,10 +29,10 @@ Page({
             show_auth:true
           });
         }else{
-          if (e.id != undefined) {
+          if (eId != undefined) {
             that.setData({ sharecomeIn: false })
             wx.navigateTo({
-              url: '/pages/album_detail/album_detail?id=' + e.id
+              url: '/pages/album_detail/album_detail?id=' + eId
             })
           }
         }
