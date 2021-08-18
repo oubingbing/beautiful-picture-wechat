@@ -1,18 +1,4 @@
 
-<view wx:if="{{show_auth}}" class='auth-container'>
-  <view class='auth-wall'>
-    <view class='auth-tips'>
-      <image src='/image/wechat-logo.png'></image>
-      <view>授权您的公开信息(昵称和头像)</view>
-    </view>
-    <button open-type="getUserInfo" 
-            bindgetuserinfo="getAuthUserInfo" 
-            class='auth-button'>
-      <view>授权登录</view>
-    </button>
-  </view>
-</view>
-
 <view class='container'>
   <view class='content'>
     <view class='content-item' wx:for="{{list}}" wx:key="{{list}}">
@@ -23,14 +9,14 @@
       <view class='item-right'>
         <view class='right-content'>
           <view class='header'>
-            <image  class='logo' src="{{imageUrl+item.logo}}" wx:if="{{item.logo != ''}}"></image>
+            <image  class='logo' src="{{item.logo}}" mode='scaleToFill' wx:if="{{item.logo != ''}}"></image>
             <view wx:if="{{item.title != ''}}">{{item.title}}</view>
           </view>
           <view class='content-word' wx:if="{{item.content != ''}}">
             <view>{{item.content}}</view>
           </view>
           <view class='pic-container' bindtap='openDetail' data-id='{{item.id}}'>
-            <image class='pic' src='{{imageUrl+item.cover}}' mode='widthFix'></image>
+            <image class='pic' src='{{item.cover}}' mode='widthFix'></image>
           </view>
           
           <view class='footer'>
@@ -39,7 +25,7 @@
               <view>{{item.view}}</view>
             </view>
             <view class='footer-item' 
-                  data-id='{{imageUrl+item.cover}}' 
+                  data-id='{{item.cover}}' 
                   data-objid='{{item.id}}' 
                   bindtap='downloadImage'>
               <image class='icon' 
@@ -47,7 +33,7 @@
               <view>下载</view>
             </view>
             <view class='footer-item'>
-              <button class='button' open-type="share" style='border: none;' id='{{item.id}}' data-image='{{imageUrl+item.cover}}'>
+              <button class='button' open-type="share" style='border: none;' id='{{item.id}}' data-image='{{item.cover}}'>
                 <image class='icon' src='/image/share.png'></image>
                 <view>分享</view>
               </button>

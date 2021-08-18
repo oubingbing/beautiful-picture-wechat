@@ -1,15 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/personal/personal",
-    "pages/album_detail/album_detail",
-    "pages/history/history",
-    "pages/about/about"
+    "pages/list/list"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "white",
-    "navigationBarTitleText": "唯美图吧",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "男神帅哥图集",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -22,14 +19,15 @@
         "pagePath": "pages/index/index",
         "iconPath": "image/pic.png",
         "selectedIconPath": "image/select-pic.png",
-        "text": "图辑"
+        "text": "专辑"
       },
       {
-        "pagePath": "pages/personal/personal",
-        "iconPath": "image/iam.png",
-        "selectedIconPath": "image/select-iam.png",
-        "text": "我的"
+        "pagePath": "pages/list/list",
+        "iconPath": "image/list.png",
+        "selectedIconPath": "image/select-list.png",
+        "text": "图集"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
