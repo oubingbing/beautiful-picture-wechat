@@ -17,13 +17,11 @@ Page({
   },
   onLoad: function (option) {
     let id = option.id;
-    this.setData({id:id})
     
     this.getList();
   },
 
   onReady:function(){
-    this.viewPicture(this.data.id,1);
   },
 
   getList: function (id, type) {
