@@ -2,21 +2,22 @@
 const app = getApp();
 
 let leftList = [
-  {id:1,pictureUrl:'https://img0.baidu.com/it/u=3311934,3048809946&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:2,pictureUrl:'https://img1.baidu.com/it/u=922405826,3887700408&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:3,pictureUrl:'https://img2.baidu.com/it/u=2468022212,2286791194&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:3,pictureUrl:'https://img2.baidu.com/it/u=518028251,2129433864&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:3,pictureUrl:'https://img0.baidu.com/it/u=1821535439,1067377918&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:3,pictureUrl:'https://img2.baidu.com/it/u=202976311,3909200953&fm=11&fmt=auto&gp=0.jpg',collect:0}
+  {id:1,pictureUrl:'https://img0.baidu.com/it/u=2162400555,3574420861&fm=26&fmt=auto&gp=0.jpg',collect:0},
+  {id:2,pictureUrl:'https://img0.baidu.com/it/u=3248710949,1894349855&fm=26&fmt=auto&gp=0.jpg',collect:0},
+  {id:3,pictureUrl:'https://img2.baidu.com/it/u=593880155,576141078&fm=26&fmt=auto&gp=0.jpg',collect:0},
+  {id:3,pictureUrl:'https://img0.baidu.com/it/u=3017245903,2955151614&fm=26&fmt=auto&gp=0.jpg',collect:0},
+  {id:3,pictureUrl:'https://img2.baidu.com/it/u=3327430747,1886779265&fm=26&fmt=auto&gp=0.jpg',collect:0},
+  {id:3,pictureUrl:'https://img2.baidu.com/it/u=1248945792,3661963056&fm=26&fmt=auto&gp=0.jpg',collect:0},
+  {id:3,pictureUrl:'https://sf3-ttcdn-tos.pstatp.com/img/pgc-image/c511854e5864490eb49af5c5a60b387d~tplv-tt-cs0:360:544.jpeg',collect:0}
 ]
 
 let rightList = [
-  {id:1,pictureUrl:'https://img1.baidu.com/it/u=3399184085,2900729079&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:2,pictureUrl:'https://img2.baidu.com/it/u=658237739,1207981296&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:3,pictureUrl:'https://img1.baidu.com/it/u=3718185343,3571448683&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:3,pictureUrl:'https://img2.baidu.com/it/u=518028251,2129433864&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:3,pictureUrl:'https://img0.baidu.com/it/u=313652895,2582042268&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:3,pictureUrl:'https://img1.baidu.com/it/u=3784968121,2723930896&fm=26&fmt=auto&gp=0.jpg',collect:0}
+  {id:1,pictureUrl:'https://sf3-ttcdn-tos.pstatp.com/img/mosaic-legacy/3e500086fe636ab1424~tplv-tt-cs0:360:600.jpeg',collect:0},
+  {id:2,pictureUrl:'https://sf3-ttcdn-tos.pstatp.com/img/pgc-image/0c9b9e1c391d4c45b266bf55935fc342~tplv-tt-cs0:360:640.jpeg',collect:0},
+  {id:3,pictureUrl:'https://sf3-ttcdn-tos.pstatp.com/img/pgc-image/39a199da093c40aea17d742fbce351b2~tplv-tt-cs0:360:720.jpeg',collect:0},
+  {id:3,pictureUrl:'https://sf3-ttcdn-tos.pstatp.com/img/labis/491d5d0429f86526d72bcfd17b85cde7~tplv-tt-cs0:360:520.jpeg',collect:0},
+  {id:3,pictureUrl:'https://sf3-ttcdn-tos.pstatp.com/img/pgc-image/d8210339628a451e826e5c01bf1ed3d0~tplv-tt-cs0:360:638.jpeg',collect:0},
+  {id:3,pictureUrl:'https://sf3-ttcdn-tos.pstatp.com/img/pgc-image/612353c4b3634b2081ce61cc3c68e2a2~tplv-tt-cs0:360:720.jpeg',collect:0}
 ]
 
 Page({

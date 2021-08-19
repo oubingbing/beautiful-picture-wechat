@@ -1,9 +1,9 @@
 const app = getApp()
 
 let listData = [
-  {id:"1",color:"#FF4040",date:"2021/8/18",logo:'https://img0.baidu.com/it/u=1551835336,1449608414&fm=26&fmt=auto&gp=0.jpg',title:"帅战",content:"你的笑容总是那么的治愈","cover":"https://img0.baidu.com/it/u=507055205,3835000679&fm=26&fmt=auto&gp=0.jpg"},
-  {id:"2",color:"#6495ED",date:"2021/8/18",logo:'https://img0.baidu.com/it/u=1551835336,1449608414&fm=26&fmt=auto&gp=0.jpg',title:"帅战",content:"夏天遇见你真好","cover":"https://img1.baidu.com/it/u=2043353927,1585764782&fm=26&fmt=auto&gp=0.jpg"},
-  {id:"3",color:"#FFD700",date:"2021/8/18",logo:'https://img1.baidu.com/it/u=255551193,4134474626&fm=26&fmt=auto&gp=0.jpg',title:"兴兴",content:"遇到夏天的风，此生无悔","cover":"https://img2.baidu.com/it/u=2537775608,542697426&fm=26&fmt=auto&gp=0.jpg"}
+  {id:"1",color:"#FF4040",date:"2021/8/18",logo:'https://img0.baidu.com/it/u=1551835336,1449608414&fm=26&fmt=auto&gp=0.jpg',title:"纯风",content:"你的笑容总是那么的治愈","cover":"https://img2.baidu.com/it/u=1065298506,3015534293&fm=26&fmt=auto&gp=0.jpg"},
+  {id:"2",color:"#6495ED",date:"2021/8/18",logo:'https://img0.baidu.com/it/u=1551835336,1449608414&fm=26&fmt=auto&gp=0.jpg',title:"恋子",content:"夏天遇见你真好","cover":"https://img0.baidu.com/it/u=387168290,2099540548&fm=26&fmt=auto&gp=0.jpg"},
+  {id:"3",color:"#FFD700",date:"2021/8/18",logo:'https://img0.baidu.com/it/u=1551835336,1449608414&fm=26&fmt=auto&gp=0.jpg',title:"爱你如风",content:"遇到夏天的风，此生无悔","cover":"https://img2.baidu.com/it/u=1262128206,720963533&fm=26&fmt=auto&gp=0.jpg"}
 ]
 
 Page({
@@ -181,7 +181,7 @@ Page({
     console.log("url:"+url)
     if(id != ''){
       return {
-        title: '男神帅哥图集，神仙颜值',
+        title: '小姐姐，你真美',
         path: '/pages/index/index?id=' + id,
         imageUrl: url,
         success: function (res) {
@@ -194,7 +194,7 @@ Page({
     }else{
       if (app.globalData.shareImage == ''){
         return {
-          title: '男神帅哥图集，神仙颜值',
+          title: '小姐姐，你真美',
           path: '/pages/index/index?id=' + id,
           success: function (res) {
             // 转发成功
