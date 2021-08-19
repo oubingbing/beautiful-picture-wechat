@@ -1,30 +1,12 @@
 
 const app = getApp();
 
-let leftList = [
-  {id:1,pictureUrl:'https://img0.baidu.com/it/u=3311934,3048809946&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:2,pictureUrl:'https://img1.baidu.com/it/u=922405826,3887700408&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:3,pictureUrl:'https://img2.baidu.com/it/u=2468022212,2286791194&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:3,pictureUrl:'https://img2.baidu.com/it/u=518028251,2129433864&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:3,pictureUrl:'https://img0.baidu.com/it/u=1821535439,1067377918&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:3,pictureUrl:'https://img2.baidu.com/it/u=202976311,3909200953&fm=11&fmt=auto&gp=0.jpg',collect:0}
-]
-
-let rightList = [
-  {id:1,pictureUrl:'https://img1.baidu.com/it/u=3399184085,2900729079&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:2,pictureUrl:'https://img2.baidu.com/it/u=658237739,1207981296&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:3,pictureUrl:'https://img1.baidu.com/it/u=3718185343,3571448683&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:3,pictureUrl:'https://img2.baidu.com/it/u=518028251,2129433864&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:3,pictureUrl:'https://img0.baidu.com/it/u=313652895,2582042268&fm=26&fmt=auto&gp=0.jpg',collect:0},
-  {id:3,pictureUrl:'https://img1.baidu.com/it/u=3784968121,2723930896&fm=26&fmt=auto&gp=0.jpg',collect:0}
-]
-
 Page({
   data: {
     imageUrl: app.globalData.imageUrl,
     id:'',
-    leftList:leftList,
-    rightList:rightList,
+    leftList:[],
+    rightList:[],
     leftHeight:0,
     rightHeigt:1,
     pageSize: 20,
@@ -42,6 +24,18 @@ Page({
 
   onReady:function(){
     this.viewPicture(this.data.id,1);
+  },
+
+  getList: function (id, type) {
+    let _this = this;
+    app.http("GET", `/api/wechat/picture2?type=boy`,{}, function (res) {
+      console.log(res)
+      let resData = res.data;
+      if(resData.code ==0){
+          let data = resData.data
+          _this.setData({leftList:data.left,rightList:data.right})
+      }
+    })
   },
 
   /**
@@ -188,46 +182,6 @@ Page({
     })
   },
 
-  /**
-   * 获取图集列表
-   */
-  getList:function(){
-    let _this = this;
-    app.http("GET", "/picture/detail/" + _this.data.id + `?pageSize=${this.data.pageSize}&pageNumber=${this.data.pageNumber}`, {}, function (res) {
-
-      _this.setData({ showGeMoreLoadin: false })
-
-      let resData = res.data;
-      let leftList = _this.data.leftList;
-      let rightList = _this.data.rightList;
-      let leftHeight = _this.data.leftHeight;
-      let rightHeigt = _this.data.rightHeigt;
-
-      if(resData.code == 0){
-        if(resData.data.length > 0){
-          resData.data.map(item => {
-            if (leftHeight <= rightHeigt) {
-              leftList.push(item);
-              leftHeight += item.pictureHeight;
-            } else {
-              rightList.push(item)
-              rightHeigt += item.pictureHeight;
-            }
-          })
-          _this.setData({
-            leftList: leftList,
-            rightList: rightList,
-            leftHeight: leftHeight,
-            rightHeigt: rightHeigt,
-            pageNumber: _this.data.pageNumber + 1
-          })
-        }else{
-          _this.setData({ notDataTips:true})
-        }
-      }
-    })
-
-  },
   /**
  * 分享
  */

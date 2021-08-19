@@ -20,7 +20,7 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": true,
+    "useApiHostProcess": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -38,8 +38,14 @@
   },
   "compileType": "miniprogram",
   "libVersion": "1.9.5",
-  "appid": "wx03343e1206173599",
-  "projectname": "%E7%94%B7%E7%A5%9E%E5%B8%85%E5%93%A5%E5%9B%BE%E9%9B%86",
+  "appid": "wx38e8da2fdaf60088",
+  "projectname": "%E5%B0%8F%E5%A7%90%E5%A7%90%E5%A5%B3%E7%A5%9E%E5%9B%BE",
+  "qqappid": "1111005837",
+  "scripts": {
+    "beforeCompile": "",
+    "beforePreview": "",
+    "beforeUpload": ""
+  },
   "condition": {
     "search": {
       "list": []

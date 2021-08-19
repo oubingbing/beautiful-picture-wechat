@@ -6,8 +6,8 @@ App({
     this.globalData.appKey = '9d43e1fe75c4447997';
 
     //设置基本接口全局变量
-    this.globalData.apiUrl = 'https://weimei.qiuhuiyi.cn/api';
-    //this.globalData.apiUrl = 'http://localhost:8080';
+    //this.globalData.apiUrl = 'https://weimei.qiuhuiyi.cn/api';
+    this.globalData.apiUrl = 'http://127.0.0.1:8000';
   
     //七牛图片外链域名0
     this.globalData.imageUrl = 'http://picture.qiuhuiyi.cn/';
@@ -15,13 +15,6 @@ App({
 
     this.shareImage='';
     this.shareWord='';
-    let token = wx.getStorageSync('token');
-    if (!token) {
-      let _this = this;
-      this.login();
-    } else {
-      console.log('token=' + token);
-    }
   },
 
   /**
